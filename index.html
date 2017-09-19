@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" /> 
+	<title>Have you grown up?</title> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'> 
+	<style type="text/css"> 
+		#demo-frame > div.demo { padding: 20px !important; }
+		h1 { font-family: 'Reenie Beanie', arial, serif; 
+		font-size: 83px;
+		text-align:center;
+		}
+		h2 { font-family: 'Reenie Beanie', arial, serif; 
+		font-size: 53px;
+		text-align:center;
+		}
+		body { font-family: 'Reenie Beanie', arial, serif; 
+		font-size: 53px;
+		text-align:center;
+		}
+h3 { font-family: 'Reenie Beanie', arial, serif; 
+		font-size: 33px;
+		text-align:center;
+		}
+		.answer{
+		font-size:53px;
+		font-family: 'Reenie Beanie', arial, serif; 
+		height:70px;
+		width:300px;
+		background-color: transparent;
+		border:0px;
+		border-bottom: 0.0714em dashed #CCC;
+		margin: 0px 0.5em;
+		}
+		
+		input:focus{
+		background-color: #fffff0;
+		outline: medium none !important;
+		}
+		
+		#adult{
+		color:red;
+		}
+
+		#child{
+		color:green;
+		}
+		
+		
+
+		
+	</style> 
+	<script>
+	$(document).ready(function() {
+     //$("#answer").focus();
+     $("#adult").hide();
+     $("#child").hide();
+	});
+	
+	function findout(){
+	    
+	    
+
+		if($("#answer").val() == "elephant" || $("#answer").val() == "boa" || $("#answer").val() == "boa constrictor" || $("#answer").val() == "boa constrictor digesting an elephant"){
+		 
+		 $('#adult').hide(2000, function() {
+			$("#child").show(2000);
+		  });
+		}else{
+		
+			$('#child').hide('2000', function() {
+			$("#adult").show(2000);
+		  });
+		   
+		}	
+	}
+	</script>
+</head>
+<body>
+<h2>Have you grown up?</h2> 
+
+<center>
+lets see, tell me what do you see in this picture?<br>
+<img src="sombrero.png" width="500px"/></center>
+Your answer: <input class="answer" id="answer" type=text />
+<input type=button onclick="findout();" value="Lets check"/>
+<div id="adult" >
+	<p>"The grown-ups are very strange" says The Little Prince. Try again.</p>
+</div>
+<div id="child">
+	<p>"children understand" says The Little Prince. Congratulations.</p>
+</div>
+<div name="bottomBar" style="z-index: 2; position: absolute; left: 0px; bottom: 10px; width: 100%;"><span class="st_twitter_vcount" displayText="Tweet"></span><span class="st_facebook_vcount" displayText="Share"></span><span class="st_email_vcount" displayText="Email"></span><span class="st_sharethis_vcount" displayText="Share"></span> 
+		<h3>With <font color="red">&hearts;</font>  <a href="http://thejeshgn.com">Thejesh GN</a> and <a href="http://wikilivres.info/w/index.php?title=The_Little_Prince&printable=yes">The Little Prince</a>.&nbsp;&nbsp;</h3> 
+</div> 
+
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'a4a67f2c-cc15-489d-bb0c-0173bc71d84d'});</script>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-51179-6']);
+  _gaq.push(['_setDomainName', '.thejeshgn.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</html>	
